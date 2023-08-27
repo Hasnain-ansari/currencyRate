@@ -1,5 +1,5 @@
 
-const api = `http://data.fixer.io/api/latest?access_key=${apiKey}`
+const api = `https://v6.exchangerate-api.com/v6/${apiKey}/latest/USD`;
 
 const fromDropDown = document.getElementById("from-currency-select");
 const toDropDown = document.getElementById("to-currency-select");
@@ -29,8 +29,8 @@ let convertCurrency = async () =>{
         fetch(api)
           .then((res) => res.json())
           .then((data) => {
-            let fromExchangeRate = data.rates[fromCurrency];
-            let toExchangeRate = data.rates[toCurrency];
+            let fromExchangeRate = data.conversion_rates[fromCurrency];
+            let toExchangeRate = data.conversion_rates[toCurrency];
             const convertedAmount = (amount / fromExchangeRate) * toExchangeRate;
 
             result.innerHTML = `${amount} ${fromCurrency} = ${convertedAmount.toFixed(2)}  ${toCurrency}`
