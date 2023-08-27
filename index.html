@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curreny Exchange</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700;800&family=Poppins:wght@100;200;300;400;500&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="index1.css">
+
+</head>
+<body>
+    <div class="wrapper">
+        <div class="app-details">
+            <img src="money.svg" class="app-icon">
+            <h1 class="app-title">Currency Converter</h1>
+        </div>
+        <label for="Amount">Amount:</label>
+        <input type="number" id="amount" value="100">
+        <div class="dropDown">
+            <select name="" id="from-currency-select"></select>
+            <select name="" id="to-currency-select"></select>
+        </div>
+        <button id="convert-button">Convert</button>
+        <div id="result"></div>
+        
+    </div>
+
+    <script src="api-key.js"></script>
+    <script src="country-codes.js"></script>
+    <script src="index1.js"></script>
+</body>
+</html>
