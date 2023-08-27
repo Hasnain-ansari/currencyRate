@@ -23,7 +23,6 @@ let convertCurrency = async () =>{
     let amount = document.querySelector("#amount").value;
     let fromCurrency = await fromDropDown.value;
     let toCurrency = await toDropDown.value;
-    const result = document.getElementById("result")
 
     if(amount.length != 0){
         fetch(api)
